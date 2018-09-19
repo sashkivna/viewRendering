@@ -1,0 +1,22 @@
+.inspector-elements {
+    display: flex;
+    flex-direction: column;
+}
+li {
+    margin: 2%;
+    border: 2px solid salmon;
+    margin-right: 15%;
+}
+select {
+    margin-top: 1%;
+}
+
+.inspector {
+    border: 4px solid salmon;
+    width: 70%;
+    background-color: bisque;
+}
+
+input {
+    width: 90%;
+}

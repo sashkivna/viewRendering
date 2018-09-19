@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="MyController">
+<button ng-click="rendering()">
+    Show rendered view
+</button>
+<div class="inspector">
+        <ul class="inspector-elements" >
+            <li ng-repeat="component in components">
+                <span>{{component.type}} type</span></br>
+                <span>{{component.value}} - selected value</span></br>
+                <input type="{{component.type}}" ng-model="component.value"></br>
+                <div ng-show="component.options.length">
+                <select ng-model="selectedOption" ng-change="selectOption(selectedOption)">
+                    <option ng-model="option.name"  ng-repeat="option in component.options">{{option.name}}</option>
+                </select>
+                </div>
+            </li>
+        </ul>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
